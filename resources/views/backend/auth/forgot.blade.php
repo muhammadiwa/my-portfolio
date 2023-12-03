@@ -219,7 +219,8 @@ h2 {
 <div class="container">
   <div class="login-box">
     <h2>Forgot Password</h2>
-    <form action="#">
+    <form action="{{ route('forgot.password') }}" method="POST" enctype="multipart/form-data">
+      @csrf
       <div class="input-box">
         <input type="email" required>
         <label>Email</label>

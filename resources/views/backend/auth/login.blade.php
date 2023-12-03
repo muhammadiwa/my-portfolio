@@ -219,13 +219,14 @@ h2 {
 <div class="container">
   <div class="login-box">
     <h2>Login</h2>
-    <form action="#">
+    <form action="{{ route('login.authenticate') }}" method="POST" enctype="multipart/form-data">
+      @csrf
       <div class="input-box">
-        <input type="email" required>
+        <input type="email" name="email" {{ old('email') }} required>
         <label>Email</label>
       </div>
       <div class="input-box">
-        <input type="password" required>
+        <input type="password" name="password" {{ old('password') }} required>
         <label>Password</label>
       </div>
       <div class="forgot-password">
