@@ -1,9 +1,10 @@
 <section id="resume" class="section-education">
     <div class="container">
         <div class="row">
+            <!-- Education Section -->
             <div class="col-lg-6 pt-3">
                 <div class="rounded-3 border border-1 position-relative h-100 overflow-hidden">
-                    <div class="box-linear-animation p-md-6 p-3 ">
+                    <div class="box-linear-animation p-md-6 p-3">
                         <div class="d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28"
                                 fill="none">
@@ -15,44 +16,19 @@
                         </div>
                         <div class="d-flex flex-column h-100 position-relative mt-5">
                             <ul class="ps-3">
-                                <li class="position-relative z-1 mb-3">
-                                    <div class="d-flex gap-2">
-                                        <p class="text-300 text-nowrap fw-regular mb-0">2020-2024:</p>
-                                        <div>
-                                            <span class="text-primary-2">MIT</span>
-                                            <p class="text-dark">Bachelor’s Degree in Computer Science</p>
+                                @foreach($educations as $education)
+                                    <li class="position-relative z-1 mb-3">
+                                        <div class="d-flex gap-2">
+                                            <p class="text-300 text-nowrap fw-regular mb-0">
+                                                {{ $education->start_year }} - {{ $education->end_year }}:
+                                            </p>
+                                            <div>
+                                                <span class="text-primary-2">{{ $education->title }}</span>
+                                                <p class="text-dark">{{ $education->description }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="position-relative z-1 mb-3">
-                                    <div class="d-flex gap-2">
-                                        <p class="text-300 text-nowrap fw-regular mb-0">2018-2019:</p>
-                                        <div>
-                                            <span class="text-primary-2">Harvard University</span>
-                                            <p class="text-dark">Certification in React and Redux, Node.js Developer
-                                                Course</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="position-relative z-1 mb-3">
-                                    <div class="d-flex gap-2">
-                                        <p class="text-300 text-nowrap fw-regular mb-0">2015-2016:</p>
-                                        <div>
-                                            <span class="text-primary-2">Stanford University</span>
-                                            <p class="text-dark">Certification in Full Stack Web Development</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="position-relative z-1 mb-3">
-                                    <div class="d-flex gap-2">
-                                        <p class="text-300 text-nowrap fw-regular mb-0">2013-2015:</p>
-                                        <div>
-                                            <span class="text-primary-2">University of Washington</span>
-                                            <p class="text-dark">Certification in React and Redux, Node.js Developer
-                                                Course</p>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                @endforeach
                             </ul>
                             <div class="line-left position-absolute top-0 border-start z-0"></div>
                         </div>
@@ -60,48 +36,35 @@
                     </div>
                 </div>
             </div>
+            <!-- Experience Section -->
             <div class="col-lg-6 pt-3">
                 <div class="bg-3 rounded-3 border border-1 p-md-6 p-3 position-relative h-100 overflow-hidden">
                     <div class="d-flex align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path class="fill-primary-2"
-                                d="M20 4H28V10.6667H25.3333V6.66667H20V4ZM12 4V6.66667H6.66667V10.6667H4V4H12ZM20 28V25.3333H25.3333V21.3333H28V28H20ZM12 28H4V21.3333H6.66667V25.3333H12V28ZM4 14.6667H28V17.3333H4V14.6667Z"
-                                fill="#A8FF53" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none">
+                            <!-- Badan koper -->
+                            <rect x="2" y="10" width="20" height="11" rx="2" stroke="#62A92B" stroke-width="2" fill="none"/>
+                            <!-- Gagang koper -->
+                            <rect x="7" y="3" width="10" height="5" rx="1" stroke="#62A92B" stroke-width="2" fill="none"/>
+                            <!-- Garis pembatas antara badan dan kantong koper -->
+                            <line x1="2" y1="10" x2="22" y2="10" stroke="#62A92B" stroke-width="2"/>
                         </svg>
-                        <h2 class="mb-0 ms-2">Researched</h2>
+                        <h2 class="mb-0 ms-2">Experience</h2>
                     </div>
                     <div class="d-flex flex-column h-100 position-relative mt-5">
                         <ul class="ps-3">
-                            <li class="position-relative z-1 mb-3">
-                                <div class="d-flex gap-2">
-                                    <p class="text-300 text-nowrap fw-regular mb-0">2023-2024:</p>
-                                    <div>
-                                        <span class="text-primary-2">Advanced Data Analytics with Big Data Tools</span>
-                                        <p class="text-dark">Utilized big data tools for advanced analytics and
-                                            insights.</p>
+                            @foreach($experiences as $experience)
+                                <li class="position-relative z-1 mb-3">
+                                    <div class="d-flex gap-2">
+                                        <p class="text-300 text-nowrap fw-regular mb-0">
+                                            {{ $experience->start_year }} - {{ $experience->end_year }}:
+                                        </p>
+                                        <div>
+                                            <span class="text-primary-2">{{ $experience->title }}</span>
+                                            <p class="text-dark">{{ $experience->description }}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="position-relative z-1 mb-3">
-                                <div class="d-flex gap-2">
-                                    <p class="text-300 text-nowrap fw-regular mb-0">2021-2013:</p>
-                                    <div>
-                                        <span class="text-primary-2">Cloud-Native Application Architectures</span>
-                                        <p class="text-dark">Studied best practices for designing cloud-native
-                                            applications.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="position-relative z-1 mb-3">
-                                <div class="d-flex gap-2">
-                                    <p class="text-300 text-nowrap fw-regular mb-0">2019-2020:</p>
-                                    <div>
-                                        <span class="text-primary-2">AI-Driven User Experience Personalization</span>
-                                        <p class="text-dark">Leveraged AI to personalize user experiences based on
-                                            behavior.</p>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
                         </ul>
                         <div class="line-left position-absolute top-0 border-start z-0"></div>
                     </div>
