@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Skill;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Education;
@@ -18,6 +19,7 @@ class HomeController extends Controller
         $educations = Education::orderBy('created_at', 'desc')->get();
         $experiences = Experience::orderBy('created_at', 'desc')->get();
         $projects = Project::orderBy('created_at', 'desc')->get();
-        return view('layout.app', compact('about', 'services', 'educations', 'experiences', 'projects'));
+        $skill = Skill::first();
+        return view('layout.app', compact('about', 'services', 'educations', 'experiences', 'projects', 'skill'));
     }
 }

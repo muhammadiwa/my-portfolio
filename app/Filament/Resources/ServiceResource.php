@@ -22,6 +22,8 @@ class ServiceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
 
+    protected static ?string $navigationLabel = 'Service';
+
     public static function form(Form $form): Form
     {
         return $form

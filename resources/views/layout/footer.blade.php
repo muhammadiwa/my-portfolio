@@ -25,7 +25,7 @@
                     <a href="#resume" class="fs-6"> Resume </a>
                     <a href="#services" class="fs-6"> Services </a>
                     <a href="#portfolio" class="fs-6"> Portfolio </a>
-                    <a href="#blog" class="fs-6"> Blog </a>
+                    <!-- <a href="#blog" class="fs-6"> Blog </a> -->
                     <a href="#contact" class="fs-6"> Contact </a>
                 </div>
             </div>

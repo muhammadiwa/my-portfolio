@@ -103,38 +103,38 @@
                                         <div class="h-100 position-relative">
                                             <ul
                                                 class="ps-3 d-flex flex-column justify-content-between h-100 position-relative">
-                                                <li class="mb-3">
-                                                    <div class="d-flex flex-column flex-md-row gap-2">
-                                                        <p class="text-dark text-nowrap mb-0">Front-End:</p>
-                                                        <span class="text-300">HTML, CSS, JavaScript, React,
-                                                            Angular</span>
-                                                    </div>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <div class="d-flex flex-column flex-md-row gap-2">
-                                                        <p class="text-dark text-nowrap mb-0">Back-End:</p>
-                                                        <span class="text-300">Node.js, Express, Python, Django</span>
-                                                    </div>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <div class="d-flex flex-column flex-md-row gap-2">
-                                                        <p class="text-dark text-nowrap mb-0">Databases:</p>
-                                                        <span class="text-300">MySQL, PostgreSQL, MongoDB</span>
-                                                    </div>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <div class="d-flex flex-column flex-md-row gap-2">
-                                                        <p class="text-dark text-nowrap mb-0">Tools & Platforms:</p>
-                                                        <span class="text-300">Git, Docker, AWS, Heroku</span>
-                                                    </div>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <div class="d-flex flex-column flex-md-row gap-2">
-                                                        <p class="text-dark text-nowrap mb-0">Others:</p>
-                                                        <span class="text-300">RESTful APIs, GraphQL, Agile
-                                                            Methodologies</span>
-                                                    </div>
-                                                </li>
+                                                @if($skill)
+                                                    <li class="mb-3">
+                                                        <div class="d-flex flex-column flex-md-row gap-2">
+                                                            <p class="text-dark text-nowrap mb-0">Front-End:</p>
+                                                            <span class="text-300">{{ $skill->frontend }}</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <div class="d-flex flex-column flex-md-row gap-2">
+                                                            <p class="text-dark text-nowrap mb-0">Back-End:</p>
+                                                            <span class="text-300">{{ $skill->backend }}</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <div class="d-flex flex-column flex-md-row gap-2">
+                                                            <p class="text-dark text-nowrap mb-0">Databases:</p>
+                                                            <span class="text-300">{{ $skill->database }}</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <div class="d-flex flex-column flex-md-row gap-2">
+                                                            <p class="text-dark text-nowrap mb-0">Tools & Platforms:</p>
+                                                            <span class="text-300">{{ $skill->tools }}</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <div class="d-flex flex-column flex-md-row gap-2">
+                                                            <p class="text-dark text-nowrap mb-0">Others:</p>
+                                                            <span class="text-300">{{ $skill->others }}</span>
+                                                        </div>
+                                                    </li>
+                                                @endif
                                             </ul>
                                         </div>
                                     </div>

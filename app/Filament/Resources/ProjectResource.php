@@ -20,6 +20,8 @@ class ProjectResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard';
 
+    protected static ?string $navigationLabel = 'Project';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -34,6 +36,11 @@ class ProjectResource extends Resource
                 FileUpload::make('image')
                     ->required()
                     ->image()
+                    ->imageEditor()
+                    ->imageResizeMode('force') // Changed from 'force' to 'contain'
+                    ->imageResizeTargetWidth('1156')
+                    ->imageResizeTargetHeight('866')
+                    ->helperText('Upload an image (will be resized to 1156x866 pixels)')
                     ->preserveFilenames()
                     ->directory('projects'),
                 TextInput::make('client')

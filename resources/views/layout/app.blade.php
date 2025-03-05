@@ -71,7 +71,7 @@
         @include('frontend.skills')
 
         <!-- blog 1 page 2 -->
-        @include('frontend.blog')
+        <!-- @include('frontend.blog') -->
 
         <!-- Contact 1-->
         @include('frontend.contact')
