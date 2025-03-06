@@ -10,7 +10,7 @@
                 <div class="container py-3 px-4">
                     <a class="navbar-brand d-flex main-logo align-items-center" href="index-2.html">
                         <img src="{{ asset('assets/imgs/home-page-2/template/favicon.svg') }}" alt="zelio" />
-                        <span class="fs-4 ms-2">James.dev</span>
+                        <span class="fs-4 ms-2">{{$about->name}}</span>
                     </a>
                     <div class="d-none d-lg-flex">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">

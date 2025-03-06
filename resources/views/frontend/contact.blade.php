@@ -62,9 +62,9 @@
                     </div>
                     <div class="ps-3 h-100">
                         <span class="text-400 fs-6">Phone Number</span>
-                        <h6 class="mb-0">+1-234-567-8901</h6>
+                        <h6 class="mb-0">+{{$about->phone}}</h6>
                     </div>
-                    <a href="tel:+1-234-567-8901" class="position-absolute top-0 start-0 w-100 h-100"></a>
+                    <a href="tel:+{{$about->phone}}" class="position-absolute top-0 start-0 w-100 h-100"></a>
                 </div>
                 <div class="d-flex align-items-center mb-3 position-relative d-inline-flex">
                     <div class="d-inline-block">
@@ -74,21 +74,21 @@
                     </div>
                     <div class="ps-3 h-100">
                         <span class="text-400 fs-6">Email</span>
-                        <h6 class="mb-0">contact@william.design</h6>
+                        <h6 class="mb-0">{{$about->email}}</h6>
                     </div>
-                    <a href="mailto:someone@example.com" class="position-absolute top-0 start-0 w-100 h-100"></a>
+                    <a href="mailto:{{$about->email}}" class="position-absolute top-0 start-0 w-100 h-100"></a>
                 </div>
                 <div class="d-flex align-items-center mb-3 position-relative d-inline-flex">
                     <div class="d-inline-block">
                         <div class="icon-flip flex-nowrap icon-shape icon-xxl border border-1 rounded-3 bg-3">
-                            <i class="ri-skype-fill text-primary-2 fs-26"></i>
+                            <i class="ri-whatsapp-fill text-primary-2 fs-26"></i>
                         </div>
                     </div>
                     <div class="ps-3 h-100">
-                        <span class="text-400 fs-6">Skype</span>
-                        <h6 class="mb-0">WilliamDesignUX</h6>
+                        <span class="text-400 fs-6">Whatsapp</span>
+                        <h6 class="mb-0">+{{$about->whatsapp}}</h6>
                     </div>
-                    <a href="skype:SKYPENAME?add" class="position-absolute top-0 start-0 w-100 h-100"></a>
+                    <a href="https://wa.me/{{$about->whatsapp}}" target="_blank" class="position-absolute top-0 start-0 w-100 h-100"></a>
                 </div>
                 <div class="d-flex align-items-center mb-3 position-relative d-inline-flex">
                     <div class="d-inline-block">
@@ -98,7 +98,7 @@
                     </div>
                     <div class="ps-3 h-100">
                         <span class="text-400 fs-6">Address</span>
-                        <h6 class="mb-0">0811 Erdman Prairie, Joaville CA</h6>
+                        <h6 class="mb-0">{{$about->address}}</h6>
                     </div>
                     <a href="https://maps.google.com/maps?q=1st+avenue,New+York"
                         class="position-absolute top-0 start-0 w-100 h-100"></a>

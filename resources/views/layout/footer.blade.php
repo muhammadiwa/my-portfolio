@@ -4,7 +4,7 @@
             <div class="text-center">
                 <a class="d-flex main-logo align-items-center justify-content-center mb-3" href="">
                     <img src="{{ asset('assets/imgs/home-page-2/template/favicon.svg') }}" alt="zelio" />
-                    <span class="fs-4 ms-2">James.dev</span>
+                    <span class="fs-4 ms-2">{{$about->name}}</span>
                 </a>
                 <div class="d-flex justify-content-center gap-3">
                     <a href="http://facebook.com">
